@@ -1,0 +1,194 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #007BFF;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.top-section {
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  align-items: flex-start;
+  width: 100%;
+  gap: 10px; /* Add spacing between buttons */
+}
+
+.file-input {
+  display: flex;
+  gap: 10px;
+}
+
+.file-input button,
+.clear-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  width: 160px;
+  text-align: center;
+}
+
+.file-input button:hover,
+.clear-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+.input-field, .file-input {
+  width: 100%;
+  max-width: 1200px; /* Take the full width of the container */
+  margin-bottom: 20px;
+}
+
+.input-field label {
+  font-size: 1.1em;
+  color: #555;
+}
+
+.input-field input,
+.input-field textarea,
+.file-input input {
+  width: calc(100% - 20px); /* Make the input boxes 20 points less wide */
+  padding: 15px; /* Equal padding on all sides */
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  margin-top: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-field input:focus,
+.input-field textarea:focus,
+.file-input input:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 10px rgba(0,123,255,0.3);
+}
+
+.main-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  width: 100%;
+}
+
+.billiard-table {
+  position: relative;
+  background-color: #006400;
+  border: 35px solid #8B4513;
+  padding: 5px;
+  border-radius: 20px;
+  width: fit-content;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(17, 26px);
+  grid-template-rows: repeat(9, 26px);
+  gap: 28px;
+}
+
+.grid div,
+.circle-cell {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, border-color 0.3s;
+  color: #fff;
+  font-size: 14px;
+}
+
+.grid div:hover,
+.circle-cell:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.grid div.active,
+.circle-cell.active {
+  color: #fff;
+  font-weight: bold;
+  background-color: #007BFF;
+  transform: scale(1.2);
+}
+
+.coordinates-display {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #007BFF;
+}
+
+.compact-table {
+  width: auto;
+  border-collapse: collapse;
+  margin-top: 0;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.compact-table th,
+.compact-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 18px;
+}
+
+.compact-table th {
+  background-color: #007BFF;
+  color: white;
+}
+
+.compact-table td {
+  background-color: #f9f9f9;
+}
+
+.compact-table td button {
+  padding: 8px 12px;
+  background-color: #FF6347;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.compact-table td button:hover {
+  background-color: #FF4500;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
